@@ -52,7 +52,7 @@ const Sidebar = () => {
     const label = useSelector(state => state.document.label);
 
     return (
-        <div className='bordered p-1'>
+        <div className='bordered p-1' tabIndex='-1'>
             <p>Textfield:</p>
             <p>ID {label}</p>
             <div>
@@ -71,7 +71,7 @@ const FormBody = () => {
     const formElements = useSelector(state => state.document.content);
 
     return (
-        <div className='bordered form_body p-1'>
+        <div className='bordered form_body p-1' tabIndex='0'>
             Form
             {formElements.map((formElement, index) => {
                 switch (formElement.formType) {
